@@ -3,71 +3,6 @@
 
 <head>
 
-<!-- ✅ Styles -->
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    margin: 20px;
-    padding: 0;
-  }
-
-  #cookie-preference-center {
-    margin-bottom: 50px;
-  }
-
-  #collection-point-form {
-    margin-top: 40px;
-  }
-
-  .ot-sdk-form {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-
-  .ot-sdk-form input,
-  .ot-sdk-form select,
-  .ot-sdk-form textarea {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-
-  .ot-sdk-form button {
-    background-color: #0056b3;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  .ot-sdk-form button:hover {
-    background-color: #004494;
-  }
-</style>
-
-<!-- ✅ Cookie Preference Center Scripts -->
-<script src="https://cdn.cookielaw.org/consent/f4163e1a-c2e1-4cf1-b7d4-42cb9a23eeb8/OtAutoBlock.js"></script>
-<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
-        charset="UTF-8"
-        data-domain-script="f4163e1a-c2e1-4cf1-b7d4-42cb9a23eeb8"></script>
-<script>
-  function OptanonWrapper() {
-    // Optional: You can hook OneTrust events here later if needed
-  }
-</script>
-
-<!-- ✅ Collection Point Form Script -->
-<script src="https://privacyportal.onetrust.com/consent-embedded-forms/consent-receipt-scripts/OtFormStub.js"
-        dataId="189faf29-e3fd-4234-8fc5-9ddb61e2a3b9"></script>
-
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -104,27 +39,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body>
-
-<!-- ✅ Page Structure: Containers -->
-<div id="cookie-preference-center"></div>
-
-<div id="collection-point-form"></div>
-
-<!-- ✅ Script to Move the Collection Point Form -->
-<script>
-  window.addEventListener('load', function() {
-    const formObserver = new MutationObserver(function() {
-      const formElement = document.querySelector('.ot-sdk-form');
-      if (formElement) {
-        const targetContainer = document.getElementById('collection-point-form');
-        targetContainer.appendChild(formElement);
-        formObserver.disconnect();
-      }
-    });
-
-    formObserver.observe(document.body, { childList: true, subtree: true });
-  });
-</script>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W58R77QG"
