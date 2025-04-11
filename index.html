@@ -3,12 +3,25 @@
 
 <head>
 
-<!-- OneTrust Cookies Consent Notice start for privacy-demo.com -->
-<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="019017c0-65b9-7f7b-9047-1ce80833de1e" ></script>
 <script type="text/javascript">
-function OptanonWrapper() { }
+  // ✅ Define OneTrust config BEFORE loading otSDKStub.js
+  var OptanonConfig = {
+    containerSelector: "#ot-container" //  This tells OneTrust to inject into this container
+  };
 </script>
-<!-- OneTrust Cookies Consent Notice end for privacy-demo.com -->
+
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/f4163e1a-c2e1-4cf1-b7d4-42cb9a23eeb8/OtAutoBlock.js"></script>
+
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
+        type="text/javascript"
+        charset="UTF-8"
+        data-domain-script="f4163e1a-c2e1-4cf1-b7d4-42cb9a23eeb8"></script>
+
+<script type="text/javascript">
+  function OptanonWrapper() {
+    // Optional: OneTrust will call this after loading
+  }
+</script>
   
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
